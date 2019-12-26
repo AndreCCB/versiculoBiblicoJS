@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<style>
+	@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+	*{
+		margin:0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	body{
+		background-color: #D3D3D3;
+		font-family: 'Lobster', cursive;
+	}
+	main{
+		max-width: 980px;
+		width: 100%;
+		height: auto;
+		margin: auto;
+		display: grid;
+		justify-content: center;
+	}
+	#verso{
+		width: 350px;
+		height: 100px;
+		margin: auto;
+		padding: 5px;
+		font-family: 'Lobster', cursive;
+		font-size: 100%;
+		border: 1px solid #cecece;
+	}
+	#btn{
+		display: grid;
+		justify-content: center;
+	}
+	.btn{
+		width: 150px;
+		padding: 15px;
+		margin-top: 19px;
+		background-color: #000;
+		color: #fff;
+		border: none;
+		border-radius: 3px;
+		font-weight: 700;
+		cursor: pointer;
+		text-align: center;
+	}
+	h1{
+		font-weight: 800;
+		text-align: center;
+	}
+	footer{
+		max-width: 980px;
+		width: 100%;
+		height: 50px;
+		margin-top: 20px;
+		text-align: center;
+	}
+</style>
+<body>
+	<header>
+		<h1>Deus seja Louvado</h1>
+	</header>
+	
+	<main>
+	<div id="verso">
+		
+	</div>
+	<div id="btn">
+		<button class="btn"  onclick="imprime()">Pedir Verso</button>
+	</div>
+	</main>
+	<footer>
+		<p>Toda honra toda a gloria seja dada a Deus que é digno de toda adoração.</p>
+	</footer>
+<script>
+		var v01 = "Você, porém, homem de Deus, fuja de tudo isso e busque a justiça, a piedade, a fé, o amor, a perseverança e a mansidão.";
+		var v02 = "Ninguém o despreze pelo fato de você ser jovem, mas seja um exemplo para os fiéis na palavra, no procedimento, no amor, na fé e na pureza. 1 Timóteo 4:12";
+		var v03 = "Estejam vigilantes, mantenham-se firmes na fé, sejam homens de coragem, sejam fortes. Façam tudo com amor.1 Coríntios 16:13-14";
+		var v04 = "Sabemos que Deus não ouve pecadores, mas ouve o homem que o teme e pratica a sua vontade.João 9:31";
+		var vers = [v01,v02,v03,v04];
+		
+		function imprime(){
+			var tam = vers.length;
+		var sort = Math.random() * tam;
+		var verso = Math.trunc(sort);
+			document.getElementById("verso").innerHTML = vers[verso];
+		}
+	</script>
+</body>
+
+</html>
